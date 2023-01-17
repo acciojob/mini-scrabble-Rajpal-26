@@ -1,12 +1,10 @@
-let h3 = document.getElementById("letterCount");
-h3.innerHTML = prompt("enter text");
-let count = 0;
-for (i = 0; i < h3.innerHTML.length; i++){
-    if (h3[i] == " ") {
-        count=0;
-    }
-    else {
-        count++;
-    }
+let evaluatedText = document.getElementById("evaluatedText")
+let letterCount = document.getElementById("letterCount")
+
+evaluatedText.addEventListener("input", cal_length)
+
+function cal_length() {
+    let text = evaluatedText.value;
+    let word = text.length;
+    letterCount.innerHTML = word;
 }
-console.log(count);
